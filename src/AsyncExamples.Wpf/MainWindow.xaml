@@ -1,0 +1,18 @@
+﻿<Window x:Class="AsyncExamples.Wpf.UIBlock.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AsyncExamples.Wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Name="btnDownload" Content="Download Weather Forecast" Click="btnDownload_Click" Padding="12" FontSize="24"></Button>
+
+        <TextBlock Grid.Row="1" Name="tbServerResponse" FontSize="16" FontFamily="Consolas" TextWrapping="Wrap"></TextBlock>
+    </Grid>
+</Window>
