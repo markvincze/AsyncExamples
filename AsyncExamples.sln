@@ -18,9 +18,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		notes-WPF.cs = notes-WPF.cs
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncExamples.Wpf.NoThreadTask", "src\AsyncExamples.Wpf.NoThreadTask\AsyncExamples.Wpf.NoThreadTask.csproj", "{6608F91C-EBB2-417A-85ED-2B27084A5B11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncExamples.Wpf.NoThreadTask", "src\AsyncExamples.Wpf.NoThreadTask\AsyncExamples.Wpf.NoThreadTask.csproj", "{6608F91C-EBB2-417A-85ED-2B27084A5B11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncExamples.Cons.Deadlock", "src\AsyncExamples.Cons.Deadlock\AsyncExamples.Cons.Deadlock.csproj", "{EF1EB74F-EBAD-49C7-A3EF-CFF558CA44CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncExamples.Cons.Deadlock", "src\AsyncExamples.Cons.Deadlock\AsyncExamples.Cons.Deadlock.csproj", "{EF1EB74F-EBAD-49C7-A3EF-CFF558CA44CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncExamples.Wpf.Deadlock", "src\AsyncExamples.Wpf.Deadlock\AsyncExamples.Wpf.Deadlock.csproj", "{9B8AF599-BAF1-4259-AF6D-B7220E2D9410}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,6 +50,10 @@ Global
 		{EF1EB74F-EBAD-49C7-A3EF-CFF558CA44CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF1EB74F-EBAD-49C7-A3EF-CFF558CA44CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF1EB74F-EBAD-49C7-A3EF-CFF558CA44CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B8AF599-BAF1-4259-AF6D-B7220E2D9410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B8AF599-BAF1-4259-AF6D-B7220E2D9410}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B8AF599-BAF1-4259-AF6D-B7220E2D9410}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B8AF599-BAF1-4259-AF6D-B7220E2D9410}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +64,7 @@ Global
 		{3C1D453A-2C16-42AC-8A08-055BB029D82B} = {DF0B86D8-1AC8-4189-8649-C9331D390FDF}
 		{6608F91C-EBB2-417A-85ED-2B27084A5B11} = {DF0B86D8-1AC8-4189-8649-C9331D390FDF}
 		{EF1EB74F-EBAD-49C7-A3EF-CFF558CA44CD} = {DF0B86D8-1AC8-4189-8649-C9331D390FDF}
+		{9B8AF599-BAF1-4259-AF6D-B7220E2D9410} = {DF0B86D8-1AC8-4189-8649-C9331D390FDF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F1619725-7F91-4695-B821-791E573E5A5A}
