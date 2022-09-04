@@ -5,14 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AsyncExamples.Wpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" FontSize="32">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Button Name="btnDownload" Content="Download Weather Forecast" Click="btnDownload_Click" Padding="12" FontSize="24"></Button>
-
-        <TextBlock Grid.Row="1" Name="tbServerResponse" FontSize="16" FontFamily="Consolas" TextWrapping="Wrap"></TextBlock>
+        <Button Name="btnDownload" Content="Download Weather Forecast" Click="btnDownload_Click" Padding="12" FontSize="30"></Button>
+        <TextBlock Grid.Row="1" Name="tbServerResponse" FontSize="20" FontFamily="Consolas" TextWrapping="Wrap"></TextBlock>
     </Grid>
 </Window>

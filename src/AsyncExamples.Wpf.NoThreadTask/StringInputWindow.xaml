@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AsyncExamples.Wpf"
         mc:Ignorable="d"
-        Title="StringInputWindow" Width="500" Height="150">
+        Title="StringInputWindow" Width="500" Height="200" FontSize="32">
     <StackPanel Orientation="Vertical">
         <Grid Margin="12">
             <Grid.ColumnDefinitions>

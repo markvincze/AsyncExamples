@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AsyncExamples.Wpf.NoThreadTask"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" FontSize="32">
     <StackPanel Orientation="Vertical">
         <Button Content="Get input from user" Name="btnGetInput" Margin="12" Padding="12" Click="btnGetInput_Click" />
         <StackPanel Orientation="Horizontal" Margin="12">

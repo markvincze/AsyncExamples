@@ -4,39 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AsyncExamples.Cons
+namespace AsyncExamples.Parallel
 {
     public class ParallelExample
     {
-        public async Task<string[]> Run()
+        public async Task<string[]> RunAsync()
         {
-            Task<string[]> allTask;
-            try
-            {
-                var response1Task = DoWork(1000);
-                var response2Task = FailingWork("input2");
-                var response3Task = DoWork(3000);
+            var response1 = await DoWork("input1");
+            var response2 = await DoWork("input2");
+            var response3 = await DoWork("input3");
 
-                allTask = Task.WhenAll(response1Task, response2Task, response3Task);
-
-                var results = await allTask;
-
-                //var response1 = await response1Task;
-                //var response2 = await response2Task;
-                //var response3 = await response3Task;
-
-                return new[] { results[0], results[1], results[2] };
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Exception: {0}", ex.ToString());
-                return Array.Empty<string>();
-            }
+            return new[] { response1, response2, response3 };
         }
 
-        private async Task<string> DoWork(int waitTime)
+        private async Task<string> DoWork(string input)
         {
-            await Task.Delay(waitTime);
+            await Task.Delay(1000);
 
             return Guid.NewGuid().ToString();
         }

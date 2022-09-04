@@ -1,7 +1,7 @@
 // Starting parallel example
 public class ParallelExample
 {
-    public async Task<string[]> Run()
+    public async Task<string[]> RunAsync()
     {
         var response1 = await DoWork("input1");
         var response2 = await DoWork("input2");
@@ -39,7 +39,7 @@ var response3 = await response3Task;
 // Exception basic
 public class ParallelExample
 {
-    public async Task<string[]> Run()
+    public async Task<string[]> RunAsync()
     {
         try
         {
@@ -80,7 +80,7 @@ public class ParallelExample
 // Exception with WhenAll
 public class ParallelExample
 {
-    public async Task<string[]> Run()
+    public async Task<string[]> RunAsync()
     {
         Task<string[]> allTask;
         try

@@ -1,6 +1,7 @@
 ﻿#pragma warning disable SYSLIB0014 // Type or member is obsolete
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -27,21 +28,8 @@ namespace AsyncExamples.Wpf.UIBlock
             InitializeComponent();
         }
 
-        private void btnDownload_Click(object sender, RoutedEventArgs e)
+        private async void btnDownload_Click(object sender, RoutedEventArgs e)
         {
-            tbServerResponse.Text = "Downloading...";
-
-            WebClient wc = new WebClient();
-
-            var downloadTask = wc.DownloadStringTaskAsync(new Uri("http://localhost:5000/weatherforecast?waitTimeMs=3000"));
-
-            downloadTask.ContinueWith(t =>
-            {
-                Dispatcher.Invoke(() =>
-                {
-                    tbServerResponse.Text = t.Result;
-                });
-            });
         }
     }
 }

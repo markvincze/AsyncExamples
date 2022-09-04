@@ -29,12 +29,7 @@ namespace AsyncExamples.Wpf.NoThreadTask
         {
             var inputWindow = new StringInputWindow();
 
-            inputWindow.Closed += (s, e) =>
-            {
-                lblInput.Content = inputWindow.CustomerInput;
-            };
-
-            inputWindow.Show();
+            // ?
         }
     }
 }

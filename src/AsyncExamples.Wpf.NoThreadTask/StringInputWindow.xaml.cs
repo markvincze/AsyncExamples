@@ -24,11 +24,11 @@ namespace AsyncExamples.Wpf.NoThreadTask
             InitializeComponent();
         }
 
-        public string CustomerInput { get; private set; }
+        public string UserInput { get; private set; }
 
         private void btnOk_Click(object sender, RoutedEventArgs e)
         {
-            CustomerInput = tbInput.Text;
+            UserInput = tbInput.Text;
 
             Close();
         }

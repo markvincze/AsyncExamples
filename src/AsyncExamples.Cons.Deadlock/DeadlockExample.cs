@@ -10,12 +10,13 @@ namespace AsyncExamples.Cons.Deadlock
     {
         public string Run()
         {
+            DoWork().Wait();
             var result = DoWork().Result;
 
             return result;
         }
 
-        public async Task<string> DoWork()
+        private async Task<string> DoWork()
         {
             await Task.Delay(1000);
 

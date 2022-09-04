@@ -30,7 +30,7 @@ public class C {
                     await Task.Delay(500);
                 }
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 await Task.Delay(20);
             }
