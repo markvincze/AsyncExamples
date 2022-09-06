@@ -10,7 +10,6 @@ namespace AsyncExamples.Cons.Deadlock
     {
         public string Run()
         {
-            DoWork().Wait();
             var result = DoWork().Result;
 
             return result;

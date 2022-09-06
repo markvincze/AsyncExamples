@@ -25,9 +25,9 @@ namespace AsyncExamples.Wpf.Deadlock
             InitializeComponent();
         }
 
-        private void btnExecute_Click(object sender, RoutedEventArgs e)
+        private async void btnExecute_Click(object sender, RoutedEventArgs e)
         {
-            var result = DoWork().Result;
+            var result = await DoWork();
 
             tbResult.Text = result;
         }
