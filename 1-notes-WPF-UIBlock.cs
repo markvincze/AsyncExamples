@@ -111,6 +111,12 @@ wc.DownloadStringCompleted += (sender, e) =>
 
 wc.DownloadStringAsync(new Uri("http://localhost:5000/weatherforecast?waitTimeMs=500"));
 
+// USING
+using (var fs = new FileStream("test.txt", FileMode.Open))
+{
+
+}
+
 // Download in a loop, async await TPL
 tbServerResponse.Text = "Downloading...";
 

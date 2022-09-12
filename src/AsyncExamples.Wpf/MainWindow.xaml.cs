@@ -28,29 +28,8 @@ namespace AsyncExamples.Wpf.UIBlock
             InitializeComponent();
         }
 
-        private async void btnDownload_Click(object sender, RoutedEventArgs e)
+        private void btnDownload_Click(object sender, RoutedEventArgs e)
         {
-            tbServerResponse.Text = "Downloading...";
-
-            WebClient wc = new WebClient();
-
-            var sb = new StringBuilder();
-
-            for (int i = 0; i < 3; i++)
-            {
-                try
-                {
-                    var content = await wc.DownloadStringTaskAsync(new Uri("http://localhost:5000/weatherforecast?waitTimeMs=500"));
-
-                    sb.Append(content);
-                }
-                catch
-                {
-                    break;
-                }
-            }
-
-            tbServerResponse.Text = sb.ToString();
         }
     }
 }

@@ -17,6 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		2-notes-sharplab.cs = 2-notes-sharplab.cs
 		3-notes-parallel.cs = 3-notes-parallel.cs
 		4-notes-WPF-NoThreadTask.cs = 4-notes-WPF-NoThreadTask.cs
+		notes-times.md = notes-times.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncExamples.Wpf.NoThreadTask", "src\AsyncExamples.Wpf.NoThreadTask\AsyncExamples.Wpf.NoThreadTask.csproj", "{6608F91C-EBB2-417A-85ED-2B27084A5B11}"
