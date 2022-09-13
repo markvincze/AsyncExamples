@@ -3,7 +3,7 @@ tbServerResponse.Text = "Downloading...";
 
 WebClient wc = new WebClient();
 
-var content = wc.DownloadString(new Uri("http://localhost:5000/weatherforecast?waitTimeMs=3000"));
+string content = wc.DownloadString(new Uri("http://localhost:5000/weatherforecast?waitTimeMs=3000"));
 
 tbServerResponse.Text = content;
 
@@ -24,7 +24,7 @@ tbServerResponse.Text = "Downloading...";
 
 WebClient wc = new WebClient();
 
-var downloadTask = wc.DownloadStringTaskAsync(new Uri("http://localhost:5000/weatherforecast?waitTimeMs=3000"));
+Task<string> downloadTask = wc.DownloadStringTaskAsync(new Uri("http://localhost:5000/weatherforecast?waitTimeMs=3000"));
 
 downloadTask.ContinueWith(t =>
 {
@@ -60,13 +60,13 @@ tbServerResponse.Text = "Downloading...";
 
 WebClient wc = new WebClient();
 
-var sb = new StringBuilder();
+StringBuilder sb = new StringBuilder();
 
 for (int i = 0; i < 3; i++)
 {
     try
     {
-        var content = wc.DownloadString(new Uri("http://localhost:5000/weatherforecast?waitTimeMs=500"));
+        string content = wc.DownloadString(new Uri("http://localhost:5000/weatherforecast?waitTimeMs=500"));
 
         sb.Append(content);
     }
@@ -83,9 +83,9 @@ tbServerResponse.Text = "Downloading...";
 
 WebClient wc = new WebClient();
 
-var sb = new StringBuilder();
+StringBuilder sb = new StringBuilder();
 
-var requestCount = 3;
+int requestCount = 3;
 
 wc.DownloadStringCompleted += (sender, e) =>
 {
@@ -112,7 +112,7 @@ wc.DownloadStringCompleted += (sender, e) =>
 wc.DownloadStringAsync(new Uri("http://localhost:5000/weatherforecast?waitTimeMs=500"));
 
 // USING
-using (var fs = new FileStream("test.txt", FileMode.Open))
+using (FileStream fs = new FileStream("test.txt", FileMode.Open))
 {
 
 }
@@ -122,13 +122,13 @@ tbServerResponse.Text = "Downloading...";
 
 WebClient wc = new WebClient();
 
-var sb = new StringBuilder();
+StringBuilder sb = new StringBuilder();
 
 for (int i = 0; i < 3; i++)
 {
     try
     {
-        var content = await wc.DownloadStringTaskAsync(new Uri("http://localhost:5000/weatherforecast?waitTimeMs=500"));
+        string content = await wc.DownloadStringTaskAsync(new Uri("http://localhost:5000/weatherforecast?waitTimeMs=500"));
         sb.Append(content);
     }
     catch

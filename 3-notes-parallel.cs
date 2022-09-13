@@ -37,10 +37,6 @@ var response2 = await response2Task;
 var response3 = await response3Task;
 
 // Exception basic
-public class ParallelExample
-{
-    public async Task<string[]> RunAsync()
-    {
         try
         {
             var response1Task = FailingWork("input1");
@@ -58,24 +54,6 @@ public class ParallelExample
             Console.WriteLine("Exception: {0}", ex.ToString());
             return Array.Empty<string>();
         }
-    }
-
-    private async Task<string> DoWork(string input)
-    {
-        await Task.Delay(1000);
-
-        return Guid.NewGuid().ToString();
-    }
-
-    private async Task<string> FailingWork(string input)
-    {
-        await Task.Delay(1000);
-
-        throw new InvalidOperationException($"Processing {input} failed.");
-
-        return Guid.NewGuid().ToString();
-    }
-}
 
 // Exception with WhenAll
 public class ParallelExample
